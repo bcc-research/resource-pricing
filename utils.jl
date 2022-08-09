@@ -227,23 +227,23 @@ function make_dev_plot(mempool1, chain1, mempool3, chain3; w=4)
             legend=:topright,
             linealpha=0.5,
             lw=1,
-            color=:firebrick,
+            color=:mediumblue,
             label=:none
     )
     plot!(plt1, w:T, r1_multi;
         lw=3,
         label="Multidimensional Prices",
-        color=:firebrick
+        color=:mediumblue
     )
     plot!(plt1, 1:T, dev3[1,:],
         lw=1,
-        color=:mediumblue,
+        color=:firebrick,
         label=:none
     )
     plot!(plt1, w:T, r1_single;
         lw=3,
         label="Uniform Prices",
-        color=:mediumblue
+        color=:firebrick
     )
 
     plt2 = plot(1:T, dev1[2,:]; 
@@ -253,23 +253,23 @@ function make_dev_plot(mempool1, chain1, mempool3, chain3; w=4)
             legend=:topright,
             linealpha=0.5,
             lw=1,
-            color=:firebrick,
+            color=:mediumblue,
             label=:none
     )
     plot!(plt2, w:T, r2_multi;
         lw=3,
         label="Multidimensional Prices",
-        color=:firebrick
+        color=:mediumblue
     )
     plot!(plt2, 1:T, dev3[2,:],
         lw=1,
-        color=:mediumblue,
+        color=:firebrick,
         label=:none
     )
     plot!(plt2, w:T, r2_single;
         lw=3,
         label="Uniform Prices",
-        color=:mediumblue
+        color=:firebrick
     )
     return plt1, plt2
 end
