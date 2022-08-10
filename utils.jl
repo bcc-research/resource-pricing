@@ -77,7 +77,7 @@ function make_plots(chain, mempool, ps, params; scenario=1, w=4)
     y = resource_usage[1:2,:]'
     plt3 = plot(1:T, y;
         lw=2,
-        label= scenario < 3 ? ["y₁" "y₂"] : "y₃",
+        label=["y₁" "y₂"],
         dpi=300,
         ylabel="Resource utilization",
         xlabel="Block number",
