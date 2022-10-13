@@ -1,1 +1,1 @@
-This file contains output figures
+This folder contains output figures
