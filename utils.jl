@@ -6,7 +6,7 @@ function make_plots(chain, mempool, ps, params; scenario=1, w=4)
     T = length(chain)
     inds = scenario < 3 ? (1:2) : (3:3)
     colors_plt1 = palette(:tab20, 2)
-    scenario < 3 && deleteat!(colors_plt1.colors.colors, 2)
+    scenario ≥ 3 && deleteat!(colors_plt1.colors.colors, 2)
     plt1 = plot(0:T, ps'[:,inds];
         lw=1,
         linealpha=0.7,
